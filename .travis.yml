@@ -14,7 +14,7 @@ after_success:
   - docker build -t daruom/complex-server ./server
   - docker build -t daruom/complex-worker ./worker
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
-  - docker push daruom/complex-client
-  - docker push daruom/complex-nginx
-  - docker push daruom/complex-server
-  - docker push daruom/complex-worker
+  - docker push daruomm/complex-client
+  - docker push daruomm/complex-nginx
+  - docker push daruomm/complex-server
+  - docker push daruomm/complex-worker
