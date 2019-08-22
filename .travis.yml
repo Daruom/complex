@@ -9,10 +9,10 @@ script:
   - docker run -e CI=true daruom/complex npm test
 
 after_success:
-  - docker build -t daruom/complex-client ./client
-  - docker build -t daruom/complex-nginx ./nginx
-  - docker build -t daruom/complex-server ./server
-  - docker build -t daruom/complex-worker ./worker
+  - docker build -t daruomm/complex-client ./client
+  - docker build -t daruomm/complex-nginx ./nginx
+  - docker build -t daruomm/complex-server ./server
+  - docker build -t daruomm/complex-worker ./worker
   - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USERNAME" --password-stdin
   - docker push daruomm/complex-client
   - docker push daruomm/complex-nginx
