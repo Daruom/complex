@@ -1,5 +1,5 @@
 {
-  "AWSEBockerrunversion":2,
+  "AWSEDockerrunversion":2,
   "containerDefinitions": [
     {
       "name": "client",
