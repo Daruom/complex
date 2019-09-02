@@ -18,3 +18,16 @@ after_success:
   - docker push daruomm/complex-nginx
   - docker push daruomm/complex-server
   - docker push daruomm/complex-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "multi-docker"
+  env: "MultiDocker-env"
+  bucket-name: arn:aws:s3:::elasticbeanstalk-us-east-2-188676039639
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
